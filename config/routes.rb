@@ -3,6 +3,7 @@ Rails.application.routes.draw do
     resources :conversations, only:[:index, :show, :create]
   end
   resource :session, only:[:create, :destroy]
+  resources :users, only: [:new, :create]
   get 'login' => 'sessions#new'
   get 'logout'=> 'sessions#destroy'
   root 'topics#index'

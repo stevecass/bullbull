@@ -7,12 +7,22 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div>
+<div id="flash-container">
 <% flash.each do |name, msg| %>
   <% if msg.is_a?(String) %>
     <%= content_tag :div, msg, :class => "flash_#{name}" %>
   <% end %>
 <% end %>
+</div>
+
+<div>
+  <% if current_user %>
+    Welcome <%= current_user.username %>
+    <%= link_to 'Log out', logout_path %>
+  <% else %>
+    Please <%= link_to 'Login', login_path %> or 
+    <%= link_to 'Register', new_user_path %>
+  <% end %>
 </div>
 
 
