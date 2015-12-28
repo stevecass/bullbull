@@ -3,3 +3,17 @@
   border: 1px solid red;
   }
 }
+
+.login_form {
+  label {
+    display : inline-block;
+    width:100px;
+  }
+}
+
+.flash_warning {
+  color: red;
+}
+.flash_notice {
+  color: green;
+}

@@ -1,4 +1,6 @@
 class TopicsController < ApplicationController
+  skip_before_action :ensure_logged_in, only:[:index, :show]
+
   def index
     @topics = Topic.order(updated_at: :desc)
   end
