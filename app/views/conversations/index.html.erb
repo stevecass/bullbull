@@ -3,3 +3,17 @@
   <%= render @topic.conversations_most_recent_first %>
 </ul>
 
+<% if @conv.errors.any? %>
+   <%= @conv.errors.full_messages %>
+<% end %>
+
+<%= form_for [@topic, @conv] do |f| %>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>
+
