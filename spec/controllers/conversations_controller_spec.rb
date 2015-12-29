@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe ConversationsController do 
   
   before(:each) do
-    u = User.create!(email:'steven@example.com', username:'steven', password:'123456')
+    u = FactoryGirl.create(:user)
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(u)
   end
 
