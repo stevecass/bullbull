@@ -1,4 +1,4 @@
 <tr class="topic">
-  <td class="topic-name"><%= link_to topic.name, topic_path(topic) %></td>
+  <td data-topic-id="<%= topic.id %>" data-topic-name="<%= topic.name %>"  data-topic-category="<%= topic.category.id %>" class="topic-name"><%= link_to topic.name, topic_path(topic) %></td>
   <td class="topic-updated"><%= format_date(topic.updated_at) %></td>
 </tr>
