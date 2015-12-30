@@ -5,6 +5,7 @@ function steven(dog, cat, mouse, fish) {
   console.log('cat', cat);
   console.log('mouse', mouse); 
   console.log('fish', fish); 
+  console.log('done');
 }
 
 steven('rover', 'sylvester', 'mickey', 'dory');
