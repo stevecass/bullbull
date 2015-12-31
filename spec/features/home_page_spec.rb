@@ -22,7 +22,6 @@ RSpec.feature 'Home page' do
         u = FactoryGirl.create(:user)
         log_user_in u
         expect(page).to have_content("Welcome #{u.username}")
-        save_and_open_page
       end
     end
 
@@ -32,7 +31,6 @@ RSpec.feature 'Home page' do
         u = FactoryGirl.create(:user)
         log_user_in u
         visit topic_path(conv.topic)
-        save_and_open_page
       end
     end
 
